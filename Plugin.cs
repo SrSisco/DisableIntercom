@@ -18,6 +18,7 @@ namespace DisableIntercom
 
             Player.IntercomSpeaking += EventHandler.OnIntercomSpeaking;
             Log.Info("DisableIntercom has been enabled.");
+            base.OnEnabled();
 
         }
 
@@ -26,6 +27,7 @@ namespace DisableIntercom
             Player.IntercomSpeaking -= EventHandler.OnIntercomSpeaking;
             EventHandler = null;
             Log.Info("DisableIntercom has been disabled.");
+            base.OnDisabled();
         }
     }
 }
